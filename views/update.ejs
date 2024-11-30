@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>Edit Blog Post</title>
+<style>
+  *{
+    padding: 0px;
+    margin: 0px;
+    }
+    h1{
+        color: black;
+        font-size: 45px;
+        margin-bottom: 20px;
+    }
+    @media (max-width: 900px){
+            h1{
+                color: rgb(255, 255, 255);
+                text-shadow: 1px 1px 10px black;
+            }
+        }
+    label{
+        font-size: larger;
+        font-weight: bold;
+    }
+    input{
+        height: 60px;
+        margin-bottom: 20px;
+    } 
+    #content{
+        height: 90px;
+        width: 480px;
+        border: 2px solid rgb(7, 49 ,7);
+        background-color: azure;
+
+        border-radius: 7px;
+        margin-left: 20px;
+
+    }
+    #content:hover{ 
+        background-color: azure;
+        box-shadow:5px 5px 5px 5px rgb(7, 49 ,7) ;
+
+        margin-left: 20px;
+    }
+    @media (max-width: 900px){
+        #content{
+            width: 450px;
+        }
+    }
+    .button{
+        border: none;
+        height: 50px;
+        width: 200px;
+        border-radius: 8px;
+        margin-left: 40px;
+        color:white;
+        background-color: rgb(7, 49 ,7);
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    @media (max-width: 700px){
+        .button{
+            margin-left: 150px;
+        }
+    }
+    
+    .button:hover{
+        border: 3px solid rgb(7, 49 ,7);
+        border-radius: 8px;
+        margin-left: 40px;
+        background-color:white;
+        color: rgb(7, 49 ,7);
+        font-size: 21px;
+        margin-top: 10px;
+        font-size: 18px;
+        font-weight: bold;    
+    } 
+    @media (max-width: 700px){
+        .button:hover{
+            margin-left: 150px;
+        }
+    }
+    .font{
+            font-size:30px ;
+            font-family: serif;
+            color: rgb(7, 49, 7);
+            text-shadow: 1px 1px 10px white;
+    }
+    @media (max-width: 900px){
+            .font{
+                margin-left: 200px;
+                color: rgb(102, 33, 4);
+            }
+    }
+        #title{ 
+            width: 480px;
+            height: 50px;
+            border: 2px solid rgb(7, 49 ,7);
+            border-radius: 7px;
+            margin-left: 20px;
+        }
+        @media (max-width: 900px){ 
+            #title{
+                width: 450px;
+            }
+         } 
+         #title:hover{
+            width: 480px;
+            height: 50px;
+            border-radius: 7px;
+            box-shadow:3px 3px 3px 3px rgb(7, 49 ,7) ;
+            margin-left: 20px;
+        }   
+        @media (max-width: 900px){ 
+            #title:hover{
+                width: 450px;
+            }
+         }
+        .title{
+            border: 2px solid rgb(7, 49 ,7);
+            border-radius: 7px;
+            width: 480px;
+            height: 50px;
+            margin-left: 20px;
+        }
+        @media (max-width: 900px){ 
+            .title{
+                width: 450px;
+            }
+         } 
+        .title:hover{
+            width: 480px;
+            height: 50px;
+            border-radius: 7px;
+            box-shadow:3px 3px 3px 3px rgb(7, 49 ,7) ;
+            margin-left: 20px;
+        }
+        @media (max-width: 900px){ 
+            .title:hover{
+                width: 450px;
+            }
+         } 
+    </style>
+</head>
+<body id="body">
+    <br>
+    <br>
+    <div>
+        <h1 style="text-align: center;">Edit Blog Post</h1><br>
+        <div style="display: flex; justify-content: center;">
+            <form action="/blogs/<%= userPost.id %>?_method=PUT" method="POST">
+                <label class="font" for="title">Blog Title:</label><br>
+                <input type="text" id="title" name="title" value="<%= userPost.title %>" required><br><br>
+                <label class="font" for="subject">Blog Subject:</label><br>
+                <input type="text" name="subject" class="title"><br> <br>  
+                <label class="font" for="content">Blog Content:</label><br>
+                <textarea id="content" name="content" rows="4" required><%= userPost.content %></textarea>
+                <br>
+                <br>
+                <button type="submit" class="button">Update Blog Post</button>
+                <a href="/blogs/<%= userPost.id %>"><button class="button">Cancel</button></a>
+          </form>
+        </div>
+    </div>
+</body>
+</html>
