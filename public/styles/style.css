@@ -1,0 +1,119 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+/* Navbar */
+.nav{
+    margin-left: 500px;
+    gap: 5px;
+}
+@media (max-width: 1400px){
+    .nav{
+        margin-left: 90px;
+    }
+}
+@media (max-width: 990px){
+    .nav{
+        margin-left: 0px;
+    }
+}
+.nav a{
+    color: white;
+}
+.nav a:hover{
+    color:#000;
+}
+.px-2:hover{
+    background-color: white;
+    color: #000;
+    transition: all .3s ease;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+.text-end{
+    margin-right: 20px;
+}
+.color{
+    background-color: #000;
+}
+.search{
+    margin-left: 150px;
+    margin-top: 0px;
+    position: absolute;
+}
+.form-control{
+    width: 300px;
+}
+@media (max-width: 990px){
+    .search{
+        margin-left: 645px;
+        margin-top: 8px;
+    }
+}
+@media (max-width: 766.9px){
+    .search{
+        margin-left: 465px;
+        margin-top: 8px;
+    }
+}
+@media (max-width: 570px){
+    .search{
+        margin-left: 390px;
+        margin-top: 8px;
+    }
+}
+/* home page */
+h1{
+    font-family: serif;
+    color: white;
+
+}
+h5 .card-title{
+    color: black;
+    font-family: serif;
+}
+h6 .card-subtitle{
+    font-family: serif;
+    color: black;
+}
+img{
+    height: 600px;
+    width: 100%;
+    
+}
+
+.division{
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card{
+    margin-bottom: 30px;
+}
+.card-body{
+    width: 400px;
+    height: 150px; 
+    border: none;
+    background-color: rgb(186, 243, 54);
+}
+.card-body:hover{
+    background-color: rgb(208, 223, 208);   
+}
+.blog-title{
+    color: #000;
+    font-family: lust, serif;
+    font-size: larger;
+    font-weight: bold;
+}
+.blog-subject{
+    font-family:  brandongrotesque, sans-serif;
+    color: #000;
+}
+
+/* code for bg img of update page */
+#body{
+    background-image: url("../images/forest2.webp");
+    background-size: cover;
+}
